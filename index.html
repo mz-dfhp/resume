@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      background: #f5f5f5;
+      font-size: 15px;
+    }
+
+    :root {
+      --cfff: #ffffff;
+      --cBgc: #2d3241;
+      --cSha: #8b8b8b;
+      --cLine: #e9e9e9;
+    }
+
+    .cSha {
+      color: var(--cSha);
+    }
+
+    .cfff {
+      color: var(--cfff);
+    }
+
+    .f-w {
+      font-weight: bold;
+    }
+
+    .f1 {
+      flex: 1;
+    }
+
+    .f16 {
+      font-size: 16px;
+    }
+
+    .f18 {
+      font-size: 18px;
+    }
+
+    .p-l {
+      padding-left: 20px;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .wrapper {
+      max-width: 800px;
+      min-height: 2240px;
+      margin: 0 auto;
+      box-shadow: 1px 1px 8px rgb(0 0 0 / 15%);
+      background-color: #fff;
+    }
+
+    section+section {
+      padding: 5px 30px;
+    }
+
+    /* 段落 */
+    p {
+      line-height: 28px;
+      position: relative;
+    }
+
+    /* 一级标题 */
+    .base-title {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      padding: 10px 0;
+      font-weight: 600;
+    }
+
+    .base-title .line-box {
+      flex: 1;
+      height: 1px;
+      border-radius: 2%;
+      margin-left: 20px;
+      background: var(--cLine);
+    }
+
+    /* 个人信息 */
+    .user-container .user-info {
+      background: var(--cBgc);
+      min-height: 120px;
+      padding: 20px 30px;
+    }
+
+    .user-container .user-info div {
+      margin-top: 6px;
+      color: var(--cfff);
+      letter-spacing: 0.5px;
+    }
+
+    /* 个人优势 */
+    .skill-container p {
+      padding: 0 0 0 20px;
+    }
+
+    .skill-container p::before {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: var(--cBgc);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    /* 工作 */
+    .work-info {
+      display: flex;
+      align-items: center;
+      padding: 3px 0;
+    }
+
+    .work-info span:first-child {
+      width: 20%;
+    }
+
+
+    .work-info span:nth-child(2) {
+      width: 40%;
+    }
+
+    .project-box {
+      padding-bottom: 10px;
+    }
+
+    /* 项目 */
+    .project-name {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      justify-content: space-between;
+    }
+
+    .project-info .project-info-item p:nth-child(n + 2) {
+      padding-left: 20px;
+    }
+
+    /* 教育经历 */
+    .education-container p {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* 自我评价 */
+    .evaluate-container {
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrapper">
+    <!-- 个人信息 -->
+    <section class="user-container">
+      <div class="user-info">
+        <div style="font-size: 22px; margin: 0">李聪</div>
+        <div>性别：男</div>
+        <div>联系方式：18397412417 | 486836332@qq.com</div>
+        <div>求职意向：前端开发工程师 | 已离职</div>
+      </div>
+    </section>
+    <!-- 个人优势 -->
+    <section class="skill-container">
+      <h1 class="base-title">
+        个人优势
+        <div class="line-box"></div>
+      </h1>
+      <p>注：工作/项目经历全部属实可查</p>
+      <p>4年开发经验，独立负责多个项目从 0 到 1（PC，H5，小程序）</p>
+      <p>熟练掌握前端开发技术（HTML5，CSS3，JavaScript，TypeScript，ES6+） </p>
+      <p>深入理解 Vue 全家桶，以及其底层原理，实现过 Vue2，Vue3 部分源码</p>
+      <p>熟练掌握 React Hooks + TypeScript 开发</p>
+      <p>能够使用 Webpack，Vite，对项目进行工程化输</p>
+      <p>在两家公司推行 Husky + Eslint + Commitlint 并落地，保证项目标准与质量</p>
+      <p>专注前端前沿技术，闲时爱专研</p>
+      <p><a href="https://github.com/mz-dfhp">github：https://github.com/mz-dfhp</a></p>
+    </section>
+    <!-- 工作经历 -->
+    <section class="work-container">
+      <h1 class="base-title"> 工作经历<div class="line-box"></div>
+      </h1>
+      <div class="work-info">
+        <span>2022.12 - 至今</span>
+        <span>甘露海中医产业（深圳）集团有限公司</span>
+        <span>前端开发负责人</span>
+      </div>
+      <div class="work-info">
+        <span>2021.03 - 2022.10</span>
+        <span>深圳品创服务集团有限公司</span>
+        <span>前端开发负责人</span>
+      </div>
+      <div class="work-info">
+        <span>2019.08 - 2021.03</span>
+        <span>湖南速博融云网络科技有限公司</span>
+        <span>前端开发</span>
+      </div>
+    </section>
+    <!-- 项目经历 -->
+    <section class="project-container">
+      <h1 class="base-title">
+        项目经历
+        <div class="line-box"></div>
+      </h1>
+      <div class="project-box">
+        <div class="project-name">
+          <span class="f-w f16">甘露海藏医院项目</span>
+          <span class="cSha">2022.12 - 2023.11</span>
+        </div>
+        <div class="project-info">
+          <p>
+            <span class="f16">项目介绍：</span>
+            <span>甘露海在实体医院基础上，为方便患者就诊，建立了线上诊疗服务。</span>
+          </p>
+          <p>
+            <span class="f16">技术栈：</span>
+            <span>Vite + Vue3 + TypeScript + Pinia + Axios + ECharts + Element Plus + Vant4 + Uniapp</span>
+          </p>
+          <div class="project-info-item">
+            <p class="f16">项目职责：</p>
+            <p>1. 负责公司前端项目技术选型，全部采用 Vue3 + TypeScript 开发</p>
+            <p>2. 负责基础建设，提供通用组件，Hooks，指令，通用业务逻辑，公共函数</p>
+            <p>3. 把控项目进度，保证每周功能迭代上线</p>
+          </div>
+          <div class="project-info-item">
+            <p class="f16">项目痛点：</p>
+            <p>1. 前端多个项目，管理起来杂而乱，公共组件和业务功能相似，需多端修改</p>
+            <p>2. 每周都需要发版，有时候上线新功能，还要告诉医生医助，门店，商务人员手动刷新</p>
+            <p>3. 大数据量渲染卡顿</p>
+          </div>
+          <div class="project-info-item">
+            <p class="f16">项目成果：</p>
+            <p>1. 采用 Monorepo 统一管理，解决公共组件和业务功能同步问题，多端复用，提高了一倍的工作效率</p>
+            <p>2. 封装通用组件（10+），Hooks（10+），指令（8），通用业务逻辑（10+），公共函数（20+），服务于（后台管理端、疗效端、医生端、线下门店端、商务端、渠道端，小程序端，H5端）多个项目</p>
+            <p>3. 主动封装了Update函数，对所有项目添加了前端自动更新提示，优化了用户体验</p>
+            <p>4. 接入话务平台座机，对医生医助通话实时保存，使用腾讯IM实现通话</p>
+            <p>5. 使用 vue-virtual-scroller 虚拟列表解决了医生开方页面渲染卡顿，进一步优化点击才创建录入信息 DOM元素，从原来的50s 减少到1s打开</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-box">
+        <div class="project-name">
+          <span class="f-w f16">小象米俪</span>
+          <span class="cSha">2021.03 - 2022.10</span>
+        </div>
+        <div class="project-info">
+          <p>
+            <span class="f16">项目介绍：</span>
+            <span>小象米俪是儿童健康服务平台，专为宝宝及孕妈妈提供一站式孕育常识，健康管理等服务。</span>
+          </p>
+          <p>
+            <span class="f16">技术栈：</span>
+            <span>Vue2 + Element + Vant + 原生微信小程序 + ECharts</span>
+          </p>
+          <div class="project-info-item">
+            <p class="f16">项目职责：</p>
+            <p>1. 负责整个后台管理端架构搭建与功能开发，三百多个页面，负责部分微信小程序端，H5开发</p>
+            <p>2. 对接 ios，安卓，开发人员，内嵌H5</p>
+            <p>3. 把控项目进度，保证迭代上线</p>
+          </div>
+          <div class="project-info-item">
+            <p class="f16">项目成果：</p>
+            <p>1. 使用 Eslint + Prettier + Husky + Commitlint + Lint-staged 统一代码规范，并在公司推行并落地</p>
+            <p>2. 基于Element封装了，表格组件，富文本，图片上传并嵌入裁剪功能，地图组件Amap，等核心组件</p>
+            <p>3. 项目多个页面需要缓存，扁平化路由，解决了keepAlive二级以上缓存失效问题</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-box">
+        <div class="project-name">
+          <span class="f-w f16">特区新势力MAX</span>
+          <span class="cSha">2021.09 - 2022.10</span>
+        </div>
+        <div class="project-info">
+          <p>
+            <span class="f16">项目介绍：</span>
+            保险公司总部对公司人员分享知识，共享经验的前沿社区。
+          </p>
+          <p>
+            <span class="f16">技术栈：</span>
+            <span>Vue2 + Element + Vant + Uniapp + uView + ECharts</span>
+          </p>
+          <div class="project-info-item">
+            <p class="f16">项目职责：</p>
+            <p>1. 负责整个项目后台管理端，微信小程序端开发</p>
+            <p>2. 把控项目进度，保证迭代上线</p>
+          </div>
+          <div class="project-info-item">
+            <p class="f16">项目成果：</p>
+            <p>1. 实现小程序与后台管理端表情两端统一</p>
+            <p>2. 利用Painter库json方式绘制海报，减少了开发工作量</p>
+            <p>3. 利用阿里云oss，处理小图片资源大小，提高图片展示速度，小程序分享页面/海报图片裁剪</p>
+            <p>4. 对小程序加入了骨架屏，使用了分包以及预下载，提升了访问速度与使用体验</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="project-box">
+        <div class="project-name">
+          <span class="f-w f16">北极星绩效（钉钉微应用）</span>
+          <span class="cSha">2020.09 - 2021.3</span>
+        </div>
+        <div class="project-info">
+          <p>
+            <span class="f16">项目介绍：</span>
+            提供科学有效的考核方法，帮助企业建立绩效体系，实现团队效能提升
+          </p>
+          <p>
+            <span class="f16">技术栈：</span>
+            <span>Vue2 + Element + Vant + ECharts</span>
+          </p>
+          <div class="project-info-item">
+
+            <p class="f16">项目职责：</p>
+            <p>
+              1.
+              搭建H5的Tabbar主入口页面开发，指标打分评分，工作台，PC端组织架构，权限管理，指标看板等模块
+            </p>
+            <p>2. 负责编写公共组件，修复bug，版本更新迭代</p>
+          </div>
+          <div class="project-info-item">
+            <p class="f16">项目成果：</p>
+            <p>1. 完成接入钉钉免登，企业购买开启员工使用权限就能在钉钉内使用</p>
+            <p>2. 利用render函数递归完成复杂的指标看板组件，根据数据动态渲染</p>
+            <p>3. 优化项目在钉钉内首屏加载2s内打开，并加入loading提升用户体验</p>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="project-box">
+        <div class="project-name">
+          <span class="f-w f16">巴马云创天地</span>
+          <span class="cSha">2020.03 - 2021.3</span>
+        </div>
+        <div class="project-info">
+          <p>
+            <span class="f16">项目介绍：</span>
+            巴马云创天地是办照，办税，开票，缴费，办理平台
+          </p>
+          <p>
+            <span class="f16">技术栈：</span>
+            <span>官网（Vue2+Element），后台管理端（Vue2+Element+ECharts），小程序端（uniapp+uView）</span>
+          </p>
+          <div class="project-info-item">
+            <p class="f16">项目职责：</p>
+
+            <p>
+              1. 参与前端项目组技术选型，与后端对接接口，自测，按期交付每期需求
+            </p>
+            <p>
+              2.
+              负责项目后台代理商，公司，个体户信息录入，官网，小程序部分模块，以及版本迭代
+            </p>
+          </div>
+          <div class="project-info-item">
+            <p class="f16">项目成果：</p>
+            <p>
+              1.
+              为团队基于Element封装表格组件，提供公共列日期，百分数，普通列，空值判断列
+            </p>
+            <p>2. 完成官网端角色(个体户，代理商，公司)路由鉴权</p>
+            <p>3. 在团队原有Vuex基础上，添加模块化与命名规范，并在团队推行</p>
+          </div>
+        </div>
+      </div> -->
+    </section>
+    <section class="education-container">
+      <h1 class="base-title">
+        教育经历
+        <div class="line-box"></div>
+      </h1>
+      <p>
+        <span>湖南交通职业技术学院</span>
+        <span>统招大专</span>
+        <span>移动互联应用技术</span>
+        <span class="cSha">2017.9 - 2020.7</span>
+      </p>
+    </section>
+    <section class="evaluate-container">
+      <h1 class="base-title">
+        自我评价
+        <div class="line-box"></div>
+      </h1>
+      <p>本人工作认真负责，能快速融入团队，喜欢在工作中不断学习和探索</p>
+    </section>
+  </main>
+</body>
+
+</html>
